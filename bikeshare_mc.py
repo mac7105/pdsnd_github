@@ -18,31 +18,60 @@ def get_filters():
     print('Hello! Let\'s explore some US bikeshare data!')
 
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-    city = input ("Which city's bikeshare data do you want to explore (Chicago, New York City or Washington)? ").lower()
-    while city not in ("chicago", "new york city", "washington"):
-        print("Your input might be wrong, please try again... ")
-        city = input ("Which city's bikeshare data do you want to explore (Chicago, New York City or Washington)? ").lower()
+
+    city = \
+        input("Which city's bikeshare data do you want to explore (Chicago, New York City or Washington)? "
+              ).lower()
+    while city not in ('chicago', 'new york city', 'washington'):
+        print 'Your input might be wrong, please try again... '
+        city = \
+            input("Which city's bikeshare data do you want to explore (Chicago, New York City or Washington)? "
+                  ).lower()
     else:
-        print("You selected", city)
+        print ('You selected', city)
 
     # get user input for month (all, january, february, ... , june)
-    month = input("Enter the month you want to analyze. Select one of the first six months or all: ").title()
-    while month not in ("January", "February", "March", "April", "May", "June","all"): 
-        print("Only the months from January up until June are available!") 
-        month = input("Enter the month you want to analyze. Select one of the first six months or all: ").title()
+
+    month = \
+        input('Enter the month you want to analyze. Select one of the first six months or all: '
+              ).title()
+    while month not in (
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'all',
+        ):
+        print 'Only the months from January up until June are available!'
+        month = \
+            input('Enter the month you want to analyze. Select one of the first six months or all: '
+                  ).title()
     else:
-        print("You selected", month)
-    
+        print ('You selected', month)
+
     # get user input for day of week (all, monday, tuesday, ... sunday)
-    day = input ("Enter the day of the week for your analysis: ").title()
-    while day not in ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "all"):
-        print("Your input might be wrong, please try again... ")
-        day = input("Enter the day of the week for your analysis: ").title()
+
+    day = input('Enter the day of the week for your analysis: ').title()
+    while day not in (
+        'Monday',
+        'Tuesday',
+        'Wednesday',
+        'Thursday',
+        'Friday',
+        'Saturday',
+        'Sunday',
+        'all',
+        ):
+        print 'Your input might be wrong, please try again... '
+        day = input('Enter the day of the week for your analysis: '
+                    ).title()
     else:
-        print ("Great stuff! You are done with your selection.", day)
-    
-    print('-'*40)
-    return city, month, day
+        print ('Great stuff! You are done with your selection.', day)
+
+    print '-' * 40
+    return (city, month, day)
 
 def load_data(city, month, day):
     """
