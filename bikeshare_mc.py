@@ -194,38 +194,48 @@ def user_stats(df, city):
     print('-'*40)
 
 def main():
-    while True:
-        city, month, day = get_filters()
+     while True:
+        (city, month, day) = get_filters()
         df = load_data(city, month, day)
 
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df, city)
-        
-        data_request_1 = input ("Do you want to display the first five rows of the database? Enter Yes or No.").title()
-        if data_request_1 != "Yes":
-            print("Thank you!")
-            
+
+        data_request_1 = \
+            input('Do you want to display the first five rows of the database? Enter Yes or No.'
+                  ).title()
+        if data_request_1 != 'Yes':
+            print 'Thank you!'
         else:
-            print(df.head(6))
-            data_request_2 = input ("Do you want to display five more rows? Enter Yes or No.").title()
-            
+
+            print df.head(6)
+            data_request_2 = \
+                input('Do you want to display five more rows? Enter Yes or No.'
+                      ).title()
+
             num = 6
             count_by = 5
             rows = num
-            while data_request_2 == "Yes":
-            
+            while data_request_2 == 'Yes':
+
                 rows += count_by
-                print(df.head(rows))
-                data_request_2 = input ("Do you want to display five more rows? Enter Yes or No.").title()
-                               
+                print df.head(rows)
+                data_request_2 = \
+                    input('Do you want to display five more rows? Enter Yes or No.'
+                          ).title()
             else:
-                print("Thank you")
-        restart = input('\nWould you like to restart? Enter Yes or No.\n')
+
+                print 'Thank you'
+        restart = \
+            input('''
+Would you like to restart? Enter Yes or No.
+''')
         if restart.lower() != 'Yes':
             break
 
-if __name__ == "__main__":
 
-	main()
+if __name__ == '__main__':
+
+    main()
