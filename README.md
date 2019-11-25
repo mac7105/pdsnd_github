@@ -22,3 +22,4 @@ https://medium.com/better-programming/beginners-quick-guide-for-handling-issues-
 https://stackoverflow.com/questions/14773271/how-to-fix-convert-space-indentation-in-sublime-text
 Import CSV Files With Jupyter Notebook and Pandas (2019) https://www.youtube.com/watch?v=eEIr70i8vbs
 How to Import CSV Dataset in a Python Development Environment (Anaconda|Spider) https://www.youtube.com/watch?v=Kao4kk4vWa4
+Learn Git (A Tutorial for Beginners) <https://www.afternerd.com/blog/learn-git/>
