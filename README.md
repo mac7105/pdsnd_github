@@ -2,7 +2,7 @@
 This project and README file was created on 24 November 2019.
 
 ### Project: Post work on GitHub
-Post work on GitHub
+Udemy Data Scientist Nanodegree I Project - an analysis on the Chicago bikesharing data
 
 ### Description
 This is the pdsnd_github repository, which was cloned from Udacity’s GitHub Project repository.
